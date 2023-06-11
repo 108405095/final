@@ -1,0 +1,379 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    .header {
+      width: 100%;
+      height: 19vh;
+      background-color: #104b29;
+      display: flex;
+      align-items: center;
+    }
+
+    .header img {
+            height: 75%;
+            padding-left: 2vw;
+
+        }
+    .bar-item-bold {
+            font-size: 37px;
+            font-family: noto+serif+tc;
+            font-weight: 900;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 5vw;
+            padding-top: 1.2vh;
+            text-decoration: none;
+        }
+    .bar {
+      width: 100%;
+      height: 10vh;
+      background-color: #2E8A3D;
+      margin-bottom: 25px ;
+      display: flex;
+      white-space: nowrap;
+    }
+    .bar-item {
+            font-size: 37px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 5vw;
+            padding-top: 1.2vh;
+            text-decoration: none;
+        }
+
+    .articlcontainer {
+      display: flex;
+      width: auto;
+      height: auto;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-top: 27px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .article {
+      width: 236px;
+      height: 190px;
+    }
+
+    .articlephoto {
+      width: 213px;
+      height: 140px;
+    }
+
+    .articletitle {
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 550;
+      font-style: normal;
+      margin-top: 11px;
+    }
+
+    .wordline {
+      width: 229px;
+      height: 2px;
+      margin-top: -10px;
+      background-color: #D9D9D9;
+    }
+
+
+    .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+   
+
+    /*tablet version*/
+    @media (max-width: 768px) {
+
+      /* 不要顯示在 mobile device */
+      .mobile-hidden {
+        display: none;
+      }
+    }
+
+    /* mobile version */
+    
+    @media (min-width: 768px) {
+
+      /* 不要顯示在 tablet 以上的 device */
+      .mobile-only {
+        display: none;
+      }
+    }
+    @media (max-width:768px) {
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+    .m-header {
+      width: 100%;
+      height: 123px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #004C1E;
+    }
+
+    .m-header img {
+      height: 85%;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+
+
+    .dropdown-menu {
+      background-color: #004C1E;
+      border-left: 0;
+
+    }
+
+    .dropdown-item {
+      color: white;
+      font-size: 20px;
+      padding-top: 10%;
+
+    }
+
+    .btn-secondary:focus {
+      background-color: #004C1E;
+      border-color: #004C1E;
+    }
+
+    .btn-secondary:hover {
+      color: #004C1E;
+      background-color: #004C1E;
+      border-color: #004C1E;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .dropdown-toggle {
+      background-color: #004C1E;
+      border-color: #004C1E;
+      border: none;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      width: auto;
+      margin-top: 15%;
+      margin-left: 7.6vw;
+      margin-right: 7.6vw;
+      height: 30vh;
+      margin-bottom: 30%;
+    }
+
+    .item img {
+      width: 100%;
+      max-height: 55vh;
+      object-fit: cover;
+      margin-top: 2%;
+    }
+
+    .item h9 {
+      font-size: 1.7rem;
+    }
+    
+  </style>
+</head>
+
+<body style="height: 100%;background-color: #E5E5E4;margin: 0 auto;">
+
+  <!--tablet only-->
+  <div class="mobile-hidden">
+    <div class="header">
+      <img src="./資產 10mdpi.png">
+    </div>
+    <div class="bar">
+
+      <div
+       class="bar-item">
+        藝文</div>
+        <div
+       class="bar-item">
+        新知</div>
+        <div
+       class="bar-item-bold">
+        校園</div>
+        <div
+       class="bar-item">
+        體育</div>
+        <div
+       class="bar-item">
+        影音</div>
+        <div
+       class="bar-item">
+        專題</div>
+      
+    </div>
+    <div
+      style="margin-top: 33px;margin-left: 10vw;font-size: 20px;font-style: normal;font-weight: 1000;line-height: 24px;color: #000000;">
+      分類：校園</div>
+    <div class="articlcontainer">
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A輔大將廢雙二一制 以成績輔導代替退學.jpg">
+        <h1 class="articletitle">輔大將廢雙二一制　以成績輔導代替退學</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A尼加拉瓜與台斷交 在台生憂獎學金計畫中止.jpg">
+        <h1 class="articletitle">尼加拉瓜與台斷交　在台生憂獎學金計畫中止</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A校內不能談政治 中科大校方拒公投講座申請.jpg">
+        <h1 class="articletitle">校內不能談政治？　中科大校方拒公投講座申請</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A照明不足增跟騷風險 陽交大承諾保障夜間校安.jpg">
+        <h1 class="articletitle">照明不足增跟騷風險　陽交大承諾保障夜間校安</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A月經平權提案過關 中山女廁將供免費衛生棉.jpg">
+        <h1 class="articletitle">月經平權提案過關　中山女廁將供免費衛生棉</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A申請簽證頻卡關 西非境外生控駐處歧視.jpg">
+        <h1 class="articletitle">申請簽證頻卡關 西非境外生控駐處歧視</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A臺大國文免修門檻高 再掀大學國文必修爭議.jpg">
+        <h1 class="articletitle">臺大國文免修門檻高 再掀大學國文必修爭議</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A大學事 校內宿舍少 校外租金高 教部失效方針映宿權難題.jpg">
+        <h1 class="articletitle">【大學事】校內宿舍少、校外租金高：教部失效方針映宿權難題</h1>
+        <div class="wordline"></div>
+      </div>
+      <div class="article"><img class="articlephoto" src="./校園主題頁/A宿舍提升計畫成效低落 學生住宿困境未解.jpg">
+        <h1 class="articletitle">宿舍提升計畫成效低落 學生住宿困境未解</h1>
+        <div class="wordline"></div>
+      </div>
+    </div>
+
+    <div class="footer">© 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司</div>
+  </div>
+  </div>
+
+  <div class="mobile-only">
+    <div class="m-header">
+      <img src="./資產 10mdpi.png">
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./藝文主題頁/menu3.png">
+        </button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button">藝文</button></li>
+          <li><button class="dropdown-item" type="button">新知</button></li>
+          <li><button class="dropdown-item" type="button">校園</button></li>
+          <li><button class="dropdown-item" type="button">體育</button></li>
+          <li><button class="dropdown-item" type="button">影音</button></li>
+          <li><button class="dropdown-item" type="button">專題</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--mobile 分類面-->
+    <div
+      style="margin-top: 33px;margin-left: 7.6vw;;font-size: 2rem;font-style: normal;font-weight: 1000;line-height: 24px;color: #000000;">
+      分類：校園</div>
+
+    <!--mobile 文章面 -->
+    <div class="container">
+        <div class="item">
+          <img src="./校園主題頁/A輔大將廢雙二一制 以成績輔導代替退學.jpg">
+          <h9>輔大將廢雙二一制　以成績輔導代替退學</h9>
+        </div>
+        <div class="item">
+        <img src="./校園主題頁/A尼加拉瓜與台斷交 在台生憂獎學金計畫中止.jpg">
+        <h9>尼加拉瓜與台斷交　在台生憂獎學金計畫中止</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A校內不能談政治 中科大校方拒公投講座申請.jpg">
+        <h9>校內不能談政治？　中科大校方拒公投講座申請</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A照明不足增跟騷風險 陽交大承諾保障夜間校安.jpg">
+        <h9>照明不足增跟騷風險　陽交大承諾保障夜間校安</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A月經平權提案過關 中山女廁將供免費衛生棉.jpg">
+        <h9>月經平權提案過關　中山女廁將供免費衛生棉</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A申請簽證頻卡關 西非境外生控駐處歧視.jpg">
+        <h9>申請簽證頻卡關 西非境外生控駐處歧視</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A臺大國文免修門檻高 再掀大學國文必修爭議.jpg">
+        <h9>臺大國文免修門檻高 再掀大學國文必修爭議</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A大學事 校內宿舍少 校外租金高 教部失效方針映宿權難題.jpg">
+        <h9>《【大學事】校內宿舍少、校外租金高：教部失效方針映宿權難題</h9>
+      </div>
+      <div class="item">
+        <img src="./校園主題頁/A宿舍提升計畫成效低落 學生住宿困境未解.jpg">
+        <h9>宿舍提升計畫成效低落 學生住宿困境未解</h9>
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
