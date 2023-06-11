@@ -1,0 +1,514 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .header {
+            width: 100%;
+            height: 19vh;
+            background-color: #104B29;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 75%;
+            padding-left: 2vw;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10vh;
+            background-color: #2E8A3D;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-item {
+            font-size: 37px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 5vw;
+            text-decoration: none;
+        }
+
+        .author {
+            display: flex;
+            width: auto;
+            height: 60vh;
+            margin-left: 7.6vw;
+            margin-right: 7.6vw;
+            margin-top: 5vh;
+            flex-direction: row;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .author img {
+            width: 33.3%;
+            height: auto;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .author-contenainer {
+            display: flex;
+            width: 33.4%;
+            flex-direction: column;
+        }
+
+        .authorname {
+            width: auto;
+            height: auto;
+            background-color: #C9DCD0;
+            font-size: 22px;
+            line-height: 27px;
+            text-align: center;
+            color: #000000;
+            font-weight: 500;
+            overflow: auto;
+        }
+
+        .authorname h4 {
+            font-size: 1.4rem;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+
+        }
+
+        .authorname h5 {
+            font-size: 1.7rem;
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+
+        .authorcontent {
+            width: auto;
+            height: 40%;
+            background-color: #D9E3DA;
+            overflow: auto;
+        }
+
+        .authorcontent h6 {
+            font-size: 1.3rem;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
+
+        .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .articlearea {
+            display: flex;
+            width: auto;
+            margin-left: 7.6vw;
+            margin-right: 7.6vw;
+            margin-top: 5vh;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .articletitle {
+            font-size: 14px;
+            line-height: 16.94px;
+            font-weight: 550;
+            font-style: normal;
+            margin-top: 8px;
+        }
+
+        .wordline {
+            width: 210px;
+            height: 2px;
+            background-color: #D9D9D9;
+            margin-top: -9px;
+        }
+
+        .article {
+            width: 213px;
+            height: 190px;
+        }
+
+        .pagebutton1 {
+            width: 25px;
+            height: 25px;
+            background-color: #D9D9D9;
+            text-align: center;
+            line-height: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+
+        /*tablet version*/
+        @media (max-width: 768px) {
+
+            /* 不要顯示在 mobile device */
+            .mobile-hidden {
+                display: none;
+            }
+        }
+
+        /* mobile version */
+        @media (min-width: 768px) {
+
+            /* 不要顯示在 tablet 以上的 device */
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        @media (max-width:768px) {
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+
+        .m-header {
+            width: 100%;
+            height: 123px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004C1E;
+        }
+
+        .m-header img {
+            height: 85%;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .dropdown-menu {
+            background-color: #004C1E;
+            border-left: 0;
+
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 20px;
+            padding-top: 10%;
+
+        }
+
+        .btn-secondary:focus {
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .btn-secondary:hover {
+            color: #004C1E;
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            background-color: #004C1E;
+            border-color: #004C1E;
+            border: none;
+            padding: 0;
+        }
+
+        .writer {
+            width: auto;
+            max-width: 760px;
+            margin-left: 7.6vw;
+            margin-right: 7.6vw;
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: auto;
+        }
+
+        .writer img {
+            width: 100%;
+            min-height: 40vh;
+            object-fit: cover;
+            margin-top: 2%;
+        }
+
+        .writer-name {
+            width: 100%;
+            min-height: 25vh;
+            margin-top: 5%;
+            background-color: #7FC79C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            overflow: auto;
+        }
+
+        .writer h1 {
+            font-size: 1.4rem;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
+
+        .writer h2 {
+            font-size: 1.7rem;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .writer-info {
+            width: 100%;
+            min-height: 25vh;
+            margin-top: 5%;
+            background-color: #D9E3DA;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .writer h3 {
+            font-size: 1.3rem;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 760px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item {
+            width: auto;
+            margin-top: 15%;
+            margin-left: 7.6vw;
+            margin-right: 7.6vw;
+            height: 30vh;
+            margin-bottom: 30%;
+        }
+
+        .item img {
+            width: 100%;
+            max-height: 55vh;
+            object-fit: cover;
+            margin-top: 2%;
+        }
+
+        .item h9 {
+            font-size: 1.7rem;
+        }
+    </style>
+</head>
+
+<body style="height: 100%;background-color: #E5E5E4;margin: 0px auto;">
+
+    <!--tablet only-->
+    <div class="mobile-hidden">
+        <div class="header">
+            <img src="./資產 10mdpi.png">
+        </div>
+        <div class="bar">
+            <div class="bar-item">
+                藝文</div>
+            <div class="bar-item">
+                新知</div>
+            <div class="bar-item">
+                校園</div>
+            <div class="bar-item">
+                體育</div>
+            <div class="bar-item">
+                影音</div>
+            <div class="bar-item">
+                專題</div>
+
+        </div>
+
+        <div class="author">
+            <img src="./個人照/chen1.jpg" style="height: 85vh;">
+
+            <div class="author-contenainer">
+
+                <div class="authorname">
+                    <h4>住天母又有青梅竹馬又要去韓國首爾大學交換多益金色世新新聞榜首政大新聞系而且吃超多哈根達斯還不會拉肚子桌球切球國手的</h4>
+                    <h5>陳楷霖</h5>
+                </div>
+
+                <div class="authorcontent">
+                    <h6><span style="font-weight: 1000;">部門</span>:校園體育</h6>
+                    <h6><span style="font-weight: 1000;">現職</span>:UDN工讀生</h6>
+                    <h6><span style="font-weight: 1000;">想對老師說</span>:拜託別當我</h6>
+                </div>
+
+            </div>
+
+            <img src="./個人照/chen2.jpg" style="height: 75vh;">
+
+        </div>
+
+
+        <div class="articlearea">
+            <div class="article"><img src="./體育主題頁/A步入職業難如登天 校園電競選手開多元出路.jpg">
+                <h1 class="articletitle">步入職業難如登天　校園電競選手開多元出路</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img class="articlephoto" src="./校園主題頁/A輔大將廢雙二一制 以成績輔導代替退學.jpg">
+                <h1 class="articletitle">輔大將廢雙二一制　以成績輔導代替退學</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img src="./體育主題頁/A屏科大打線火力全開 退陸軍官校捧壘球金盃.jpg">
+                <h1 class="articletitle">屏科大打線火力全開 退陸軍官校捧壘球金盃</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img src="./校園主題頁/A校內不能談政治 中科大校方拒公投講座申請.jpg">
+                <h1 class="articletitle">校內不能談政治？　中科大校方拒公投講座申請</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img src="./體育主題頁/A朱恆昀白紹騰默契絕佳 合氣道大專盃攜手攬三金.jpg">
+                <h1 class="articletitle">朱恆昀、白紹騰默契絕佳　合氣道大專盃攜手攬三金</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img src="./校園主題頁/A月經平權提案過關 中山女廁將供免費衛生棉.jpg">
+                <h1 class="articletitle">月經平權提案過關　中山女廁將供免費衛生棉</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img src="./體育主題頁/A林家鋐關鍵長打逆轉臺體梅花旗成功封王.jpg">
+                <h1 class="articletitle">林家鋐關鍵長打逆轉　臺體梅花旗成功封王</h1>
+                <div class="wordline"></div>
+            </div>
+            <div class="article"><img class="articlephoto" src="./校園主題頁/A申請簽證頻卡關 西非境外生控駐處歧視.jpg">
+                <h1 class="articletitle">申請簽證頻卡關 西非境外生控駐處歧視</h1>
+                <div class="wordline"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mobile-only">
+        <div class="m-header">
+            <img src="./資產 10mdpi.png">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="./menu3.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" type="button">藝文</button></li>
+                    <li><button class="dropdown-item" type="button">新知</button></li>
+                    <li><button class="dropdown-item" type="button">校園</button></li>
+                    <li><button class="dropdown-item" type="button">體育</button></li>
+                    <li><button class="dropdown-item" type="button">影音</button></li>
+                    <li><button class="dropdown-item" type="button">專題</button></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--mobile 作者-->
+        <div class="writer">
+            <img src="./個人照/chen1.jpg">
+
+            <div class="writer-name">
+                <h1>住天母又有青梅竹馬又要去韓國首爾大學交換多益金色世新新聞榜首政大新聞系而且吃超多哈根達斯還不會拉肚子桌球切球國手的</h1>
+                <h2 style="font-weight: 900;">陳楷霖</h2>
+            </div>
+
+            <div class="writer-info">
+                <h3><span style="font-weight: 900;">部門</span>：校園體育</h3>
+                <h3><span style="font-weight: 900;">現職</span>：聯合報工讀生</h3>
+                <h3><span style="font-weight: 900;">想對老師說</span>：拜託別當我</h3>
+
+            </div>
+        </div>
+
+        <!--mobile 文章面 -->
+        <div class="container">
+
+            <div class="item">
+                <img src="./體育主題頁/A步入職業難如登天 校園電競選手開多元出路.jpg">
+                <h9>步入職業難如登天　校園電競選手開多元出路</h9>
+            </div>
+            <div class="item">
+                <img src="./校園主題頁/A輔大將廢雙二一制 以成績輔導代替退學.jpg">
+                <h9>輔大將廢雙二一制　以成績輔導代替退學</h9>
+            </div>
+            <div class="item">
+                <img src="./體育主題頁/A屏科大打線火力全開 退陸軍官校捧壘球金盃.jpg">
+                <h9>屏科大打線火力全開 退陸軍官校捧壘球金盃</h9>
+            </div>
+            <div class="item">
+                <img src="./校園主題頁/A校內不能談政治 中科大校方拒公投講座申請.jpg">
+                <h9>校內不能談政治？　中科大校方拒公投講座申請</h9>
+            </div>
+            <div class="item">
+                <img src="./體育主題頁/A朱恆昀白紹騰默契絕佳 合氣道大專盃攜手攬三金.jpg">
+                <h9>朱恆昀、白紹騰默契絕佳　合氣道大專盃攜手攬三金</h9>
+            </div>
+            <div class="item">
+                <img src="./校園主題頁/A月經平權提案過關 中山女廁將供免費衛生棉.jpg">
+                <h9>月經平權提案過關　中山女廁將供免費衛生棉</h9>
+            </div>
+            <div class="item">
+                <img src="./體育主題頁/A林家鋐關鍵長打逆轉臺體梅花旗成功封王.jpg">
+                <h9>林家鋐關鍵長打逆轉　臺體梅花旗成功封王</h9>
+            </div>
+            <div class="item">
+                <img src="./校園主題頁/A申請簽證頻卡關 西非境外生控駐處歧視.jpg">
+                <h9>申請簽證頻卡關 西非境外生控駐處歧視</h9>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">© 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
