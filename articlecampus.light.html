@@ -1,1 +1,626 @@
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&family=Noto+Serif+TC:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #E5E5E4;
+        }
+
+        .header {
+            width: 100%;
+            height: 12vh;
+            background-color: #104B29;
+            display:flex;
+            align-items: center;
+        }
+
+        .header img {
+            height:73%;
+            padding-left: 2vw;
+        }
+
+        .bar {
+            width: 100%;
+            height: 5.5vh;
+            background-color: #2E8A3D;
+            margin-bottom: 3vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-item {
+            font-size: 23px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            text-decoration: none;
+        }
+
+        .cat-time {
+            font-size: 18px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #5d5d5d;
+            margin-left: 2.3vw;
+            margin-top:20px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            font-weight: 900;
+            padding: 0%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+
+        .centered-figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .article-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        figure {
+            width: 100%;
+            margin-top: 0px;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+
+        figcaption {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            width: 80%;
+            text-align: center;
+
+        }
+
+        .figcaption-article {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100％;
+        }
+
+        .pre {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            color: #5E5E5E;
+            width: 73vw;
+            padding-top: 2.5vh;
+            padding-bottom: 2.5vh;
+            margin-top:1.5vh;
+            margin-bottom: 4vh;
+            font-size: 25px;
+            line-height: 200%;
+            text-align: justify;
+        }
+
+        .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-body {
+            width: 67vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            color: #131313;
+            width: 67vw;
+            margin-bottom: 5.5vh;
+            font-size: 22px;
+            line-height: 195%;
+            text-align: justify;
+        }
+
+        .hashtag {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            display: inline-block;
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 45px;
+            color: #808080;
+        }
+        
+        .writer {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 20px;
+            margin-top: 12px;
+            color: #808080;
+            width: 69vw;
+        }
+
+        .job {
+            margin-top: 1.3vh;
+            margin-left: 1.4vw;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .box {
+            width: 67vw;
+        }
+
+        .head {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: #000000 1px solid;
+            margin-top:1vh;
+            margin-left:0.5vw;
+            margin-right: 1vw;
+            margin-bottom:1vh;
+            object-fit: contain;
+            overflow: hidden;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 600;
+            margin-left: 1.2vw;
+            margin-top:2vh;
+            color: #313131;
+            display: inline-block;
+            text-decoration: none;
+            color: #1e1e1e;
+            text-align:
+        }
+
+        .read-more {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #313131;
+            word-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .read-more-article {
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        .article-container {
+            display: flex;
+            width: 73vw;
+            height: 259px;
+            margin-left: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .article1 {
+            width: 26%;
+            height: 73%;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        .articlephoto {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .articletitle {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 550;
+            font-style: normal;
+            margin-top: 8px;
+            margin-left: 0;
+            margin-right: 0;
+            color: #171717;
+        }
+
+        .read {
+            font-size: 28px;
+            font-weight: 700;
+            padding-left: 13.5vw;
+            margin-top: 30px;
+        }
+
+        /*tablet*/
+        @media (min-width:768px) {
+
+            /* 不要顯示在 tablet 以上的 device */
+            .mobile-only {
+                display: none;
+            }
+
+        }
+
+
+        /*mobile version*/
+        @media (max-width: 768px) {
+
+            /* 不要顯示在 mobile device */
+            .mobile-hidden {
+                display: none;
+            }
+
+            .footer {
+                margin-top: 40px;
+            }
+
+            .cat-time {
+                font-size: 9px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid;
+            }
+
+
+            figcaption {
+                font-size: 9px;
+            }
+
+            .figcaption-article {
+                font-size: 9px;
+            }
+
+            .pre {
+                font-size: 16px;
+                line-height: 165%;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .hashtag {
+                font-size: 10px;
+                line-height: 15px;
+                margin-top: 30px;
+                padding-left: 6px;
+                padding-top: 3px;
+                padding-right: 6px;
+                padding-bottom: 3px;
+            }
+
+            .read {
+                font-size: 20px;
+                line-height: 20px;
+                margin-top: 18px;
+            }
+
+            /*調字體大小*/
+            .read-more {
+                font-size: 11px;
+                margin: 2px;
+                line-height: 20px;
+            }
+
+            .head {
+                width: 46px;
+                height: 46px;
+            }
+
+            .name {
+                font-size: 16px;
+                margin-left: 1vw;
+            }
+
+            .job {
+                font-size: 12px;
+                margin-top:0.5vh;
+                margin-bottom:1vh;
+            }
+
+            .article-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-left: 13.5vw;
+                margin-right: 13.5vw;
+                width: auto;
+                height: auto;
+            }
+
+            .article1 {
+                display: flex;
+                width: auto;
+                min-height: 10vh;
+                margin-bottom: 0.5vh;
+                flex-direction: column;
+            }
+
+            .articlephoto{
+            height:30vh;
+            }
+
+            .articletitle {
+                font-size: 13px;
+                margin-top: 2px;
+            }
+
+
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+
+        .m-header {
+            width: 100%;
+            height: 12.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004C1E;
+            margin-bottom: 3.5vh;
+        }
+
+        .m-header img {
+            height: 65%;
+            margin: 0 auto;
+        }
+
+        .dropdown-menu {
+            background-color: #004C1E;
+            border-left: 0;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 20px;
+            padding-top: 10%;
+            text-decoration: none;
+        }
+
+        .btn-secondary:focus {
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .btn-secondary:hover {
+            color: #004C1E;
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            background-color: #004C1E;
+            border-color: #004C1E;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--tablet header&bar-->
+    <div class="mobile-hidden">
+
+        <div class="header">
+            <a href="https://108405095.github.io/final/homepage.html" target="_blank"><img src="./article-page/art/home/icon.png"><a>
+        </div>
+
+        <div class="bar">
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                    藝文
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                    新知
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                    校園
+                </a> </div>
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                    體育
+                </a> </div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                    影音
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                    專題
+                </a></div>
+        </div>
+    </div>
+
+    <!--mobile header&bar-->
+    <div class="mobile-only">
+        <div class="m-header">
+            <img src="./article-page/art/home/icon.png">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="./article-page/menu3.png" style="width: 110%;height: auto;padding-right:2.5vw;">
+                </button>
+                <ul class="dropdown-menu">
+                   <a href="https://108405095.github.io/final/topicpage art.html" target="_blank"> <li><button class="dropdown-item" type="button">藝文</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpagenew.html" target="_blank"><li><button class="dropdown-item" type="button">新知</button></li></a>
+                   <a href="https://108405095.github.io/final/topicpagecampus.html" target="_blank"> <li><button class="dropdown-item" type="button">校園</button></li></a>
+                   <a href="https://108405095.github.io/final/topicpagesports.html" target="_blank"> <li><button class="dropdown-item" type="button">體育</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpagevideo.html" target="_blank"><li><button class="dropdown-item" type="button">影音</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpage long.html" target="_blank"><li><button class="dropdown-item" type="button">專題</button></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <span class="cat-time">
+        校園 2021／11／17 22:54:54
+    </span>
+    <h1>
+       照明不足增跟騷風險　陽交大承諾保障夜間校安
+    </h1>
+
+    <figure>
+        <img src="./campus/light/2.jpeg" class="main-img">
+        <figcaption class="hc"><i>發文學生、國立陽明交通大學土木工程學系學生林同學（化名）表示尾隨事件發生地點約位於國立陽明交通大學土木工程學系系館前方。　圖／國立陽明交通大學資訊管理與財務金融學系學生王冠勛提供</i>
+        </figcaption>
+    </figure>
+
+    <div class="article-body hc">
+        <div class="pre">
+             5日，國立陽明交通大學土木工程學系學生於臉書（Facebook）社團「清交二手大拍賣XD」發文表示，疑似在校內遭到尾隨。對此，陽交大學生會交通分會學生議會表示已向校方反映類似案例，並呼籲校方改善夜間照明設備不足的問題。而陽交大學生事務處已發布防制跟蹤騷擾的教戰守則，總務處駐警隊也將加強夜間巡邏重點區域。
+      </div>
+        <p class="hc">
+            【記者李昀璇綜合報導】林同學（化名）於臉書社團「清交二手大拍賣XD」表示，他在半夜從新竹光復校區宿舍研三舍走回女二舍的途中，被一名可疑男性尾隨並貼近，該男朝他的頭髮「狂吸了一頓」後便逃逸。由於校園為開放空間，故無法確定該男是否為陽交大學生。「交大很多小路照明都蠻不足，晚上要走比較明亮的路就要繞比較遠。」林同學也於事後表示，由於學生普遍信任校內安全，不會選擇繞路，使學生常身處夜間照明不足的區域，遭遇騷擾時反而無法在第一時間察覺。
+      </p>
+        <p class="hc">
+      對此，陽交大學務長張玉佩表示，接獲學生代表通報後，學務處已先和學生討論、歸納出常發生跟蹤事件的區域，並立即聯絡駐警隊加強巡邏重點區域，地點包括：交清小徑、圖書館周邊到學生活動中心、女二舍至學生活動中心等。此外，學務處也和教官研擬防制跟蹤騷擾的教戰守則，讓學生在遭遇危險時，能在第一時間進行自我防衛。
+      </p>
+      <figure class="centered-figure">
+            <img src="./campus/light/1.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>發文學生、國立陽明交通大學土木工程學系學生林同學（化名）表示尾隨事件發生地點約位於國立陽明交通大學土木工程學系系館前方。　圖／國立陽明交通大學資訊管理與財務金融學系學生王冠勛提供</i>
+            </figcaption>
+        </figure>
+        <p class="hc">
+      此事件不僅受到熱烈討論，許多學生也有感於夜間照明設備不足的困擾。「晚上一個人在校園走路的時候很常是要開手電筒的，有時候開了還是會很暗。」陽交大傳播與科技學系學生盧鈺珊表示，因操場在晚間11點熄燈後缺乏光源，學生行經時會特別留意自身安全。陽交大電子物理系學生林意婕也提及，夜間步行於某些區域時，即使打開手電筒仍缺乏安全感。
+      </p>
+        <p class="hc">
+           「一個校園充斥著暗處，要怎麼說服學生這是安全的？」現任陽交大學生議員吳諒濬表示，「校園必須安全」是校內師生全體的共識，而解決校園照明不足的問題正是增進校園安全的必要條件。吳諒濬認為，校方雖重視校安問題，但繁雜的行政程序可能會減少校方推行相關政策的意願。他也質疑，由於在夜間活動的大多是學生，大部分的教職員不在學校，恐怕不熟悉夜間校園環境，「當校方無法切身了解學生需求時，要怎麼解決校園問題？」
+      </p>
+      <figure class="centered-figure">
+            <img src="./campus/light/3.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>國立陽明交通大學學生與校方歸納出校內幾處夜間較危險的區域，地點包括：交清小徑、圖書館周邊到學生活動中心及女二舍至學生活動中心等地。圖為學生活動中心周邊。　圖／陽明交通大學資訊管理與財務金融學系王冠勛提供</i>
+            </figcaption>
+        </figure>
+         <p class="hc">
+            為改善校內的夜間照明，陽交大軍訓室主任陳效邦說明，總務處營繕二組已規劃在尾隨事發地點旁的停車場增設一支四米高燈具，目前基座已灌好，預計於本週裝燈。此外，軍訓室將於12月20日召開校園安全及災害防救委員會，討論改善校內燈光昏暗、無架設監視器處的方針。
+      </p>
+        <p class="hc">
+            針對夜間校園安全問題，張玉佩認為教導學生如何進行自我防衛至關重要，「不是女孩子不能晚回家，而是這個社會其實要告訴我們有些事情是我們的權利，比如哪時候回家是我們的權利。」但是在行使權利的同時，仍要練習面對潛在危險，才能在當下冷靜求助。吳諒濬則對校方提出的解方表示肯定，他也期望未來能增設更多路燈、減少暗處，並推廣校安專線。此外，他也呼籲校方重視學生在校安全，期望師生能共同討論，建立更安全的校園。
+      </p>
+    </div>
+    <div class="box hc">
+        <div class="hashtag">#夜間安全</div>
+        <div class="hashtag">#校園安全</div>
+        <div class="hashtag">#國立陽明交通大學</div>
+        <div class="hashtag">#跟蹤騷擾</div>
+    </div>
+
+     <div class="writer">
+       <img src="./icon/summer.png" class="head"><a href="https://108405095.github.io/final/writerpage1 lee.html" class="name" target="_blank" >李昀璇<a>
+        <div class="job">
+            政大大學報校園體育版記者
+        </div>
+        <div class="read-more">
+            <a href="https://108405095.github.io/final/articlecampus.gua.html" class="read-more-article" target="_blank">
+                ・尼加拉瓜與台斷交　在台生憂獎學金計畫中止
+            </a>
+             <a href="https://108405095.github.io/final/lacrosse.html" class="read-more-article" target="_blank">
+                ・帶球穿越布陣　袋棍球有望進軍奧運
+            </a>
+            <a href="https://108405095.github.io/final/articlecampus.chinese.html" class="read-more-article" target="_blank">
+                ・臺大國文免修門檻高 再掀大學國文必修爭議
+            </a>
+            <a href="https://108405095.github.io/final/hocky.html" class="read-more-article" target="_blank">
+                ・不「曲」不撓　黑馬長榮破隊史首摘銀
+            </a>
+        </div>
+    </div>
+
+    <div class="read">延伸閱讀</div>
+    <div class="article-container hc">
+         <a class="article1" href="https://108405095.github.io/final/articlecampus.visa.html" target="_blank">
+            <div><img class="articlephoto" src="./campus/politic/3.jpeg">
+                <h1 class="articletitle">申請簽證頻卡關 西非境外生控駐處歧視</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/articlecampus.gua.html" target="_blank">
+            <div><img class="articlephoto" src="./campus/nigga/1.jpeg">
+                <h1 class="articletitle">尼加拉瓜與台斷交　在台生憂獎學金計畫中止</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/articlecampus.monthly.html" target="_blank">
+            <div><img class="articlephoto" src="./campus/monthly/4.jpeg">
+                <h1 class="articletitle">月經平權提案過關　中山女廁將供免費衛生棉</h1>
+            </div>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="footer">
+        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
+    </div>
+</body>
+
+</html>
