@@ -1,0 +1,638 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&family=Noto+Serif+TC:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #E5E5E4;
+        }
+
+        .header {
+            width: 100%;
+            height: 12vh;
+            background-color: #104B29;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 73%;
+            padding-left: 2vw;
+        }
+
+        .bar {
+            width: 100%;
+            height: 5.5vh;
+            background-color: #2E8A3D;
+            margin-bottom: 3vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-item {
+            font-size: 23px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            text-decoration: none;
+        }
+
+        .cat-time {
+            font-size: 18px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #5d5d5d;
+            margin-left: 2.3vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            font-weight: 900;
+            padding: 0%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+
+        .centered-figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .article-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        figure {
+            width: 100%;
+            margin-top: 0px;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+
+        figcaption {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            width: 80%;
+            text-align: center;
+
+        }
+
+        .figcaption-article {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100％;
+        }
+
+        .pre {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            color: #5E5E5E;
+            width: 73vw;
+            padding-top: 2.5vh;
+            padding-bottom: 2.5vh;
+            margin-top: 1.5vh;
+            margin-bottom: 4vh;
+            font-size: 25px;
+            line-height: 200%;
+            text-align: justify;
+        }
+
+        .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-body {
+            width: 67vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            color: #131313;
+            width: 67vw;
+            margin-bottom: 5.5vh;
+            font-size: 22px;
+            line-height: 195%;
+            text-align: justify;
+        }
+
+        .hashtag {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            display: inline-block;
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 45px;
+            color: #808080;
+        }
+
+        .writer {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 20px;
+            margin-top: 12px;
+            color: #808080;
+            width: 69vw;
+        }
+
+        .job {
+            margin-top: 1.3vh;
+            margin-left: 1.4vw;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .box {
+            width: 67vw;
+        }
+
+        .head {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: #000000 1px solid;
+            margin-top: 1vh;
+            margin-left: 0.5vw;
+            margin-right: 1vw;
+            margin-bottom: 1vh;
+            object-fit: contain;
+            overflow: hidden;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 600;
+            margin-left: 1.2vw;
+            margin-top: 2vh;
+            color: #313131;
+            display: inline-block;
+            text-decoration: none;
+            color: #1e1e1e;
+        }
+
+        .read-more {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #313131;
+            word-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .read-more-article {
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        .article-container {
+            display: flex;
+            width: 73vw;
+            height: 259px;
+            margin-left: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .article1 {
+            width: 26%;
+            height: 73%;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        .articlephoto {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .articletitle {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 550;
+            font-style: normal;
+            margin-top: 8px;
+            margin-left: 0;
+            margin-right: 0;
+            color: #171717;
+        }
+
+        .read {
+            font-size: 28px;
+            font-weight: 700;
+            padding-left: 13.5vw;
+            margin-top: 30px;
+        }
+
+        /*tablet*/
+        @media (min-width:768px) {
+
+            /* 不要顯示在 tablet 以上的 device */
+            .mobile-only {
+                display: none;
+            }
+
+        }
+
+
+        /*mobile version*/
+        @media (max-width: 768px) {
+
+            /* 不要顯示在 mobile device */
+            .mobile-hidden {
+                display: none;
+            }
+
+            .footer {
+                margin-top: 40px;
+            }
+
+            .cat-time {
+                font-size: 9px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid;
+            }
+
+
+            figcaption {
+                font-size: 9px;
+            }
+
+            .figcaption-article {
+                font-size: 9px;
+            }
+
+            .pre {
+                font-size: 16px;
+                line-height: 165%;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .hashtag {
+                font-size: 10px;
+                line-height: 15px;
+                margin-top: 30px;
+                padding-left: 6px;
+                padding-top: 3px;
+                padding-right: 6px;
+                padding-bottom: 3px;
+            }
+
+            .read {
+                font-size: 20px;
+                line-height: 20px;
+                margin-top: 18px;
+            }
+
+            /*調字體大小*/
+            .read-more {
+                font-size: 11px;
+                margin: 2px;
+                line-height: 20px;
+            }
+
+            .head {
+                width: 46px;
+                height: 46px;
+            }
+
+            .name {
+                font-size: 16px;
+                margin-left: 1vw;
+            }
+
+            .job {
+                font-size: 12px;
+                margin-top: 0.5vh;
+                margin-bottom: 1vh;
+            }
+
+            .article-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-left: 13.5vw;
+                margin-right: 13.5vw;
+                width: auto;
+                height: auto;
+            }
+
+            .article1 {
+                display: flex;
+                width: auto;
+                min-height: 10vh;
+                margin-bottom: 0.5vh;
+                flex-direction: column;
+            }
+
+            .articlephoto {
+                height: 30vh;
+            }
+
+            .articletitle {
+                font-size: 13px;
+                margin-top: 2px;
+            }
+
+
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+
+        .m-header {
+            width: 100%;
+            height: 12.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004C1E;
+            margin-bottom: 3.5vh;
+        }
+
+        .m-header img {
+            height: 65%;
+            margin: 0 auto;
+        }
+
+        .dropdown-menu {
+            background-color: #004C1E;
+            border-left: 0;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 20px;
+            padding-top: 10%;
+            text-decoration: none;
+        }
+
+        .btn-secondary:focus {
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .btn-secondary:hover {
+            color: #004C1E;
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            background-color: #004C1E;
+            border-color: #004C1E;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--tablet header&bar-->
+    <div class="mobile-hidden">
+
+        <div class="header">
+            <a href="https://108405095.github.io/final/homepage.html" target="_blank"><img
+                    src="./article-page/art/home/icon.png"><a>
+        </div>
+
+        <div class="bar">
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                    藝文
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                    新知
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                    校園
+                </a> </div>
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                    體育
+                </a> </div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                    影音
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                    專題
+                </a></div>
+        </div>
+    </div>
+
+    <!--mobile header&bar-->
+    <div class="mobile-only">
+        <div class="m-header">
+            <img src="./article-page/art/home/icon.png">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="./article-page/menu3.png" style="width: 110%;height: auto;padding-right:2.5vw;">
+                </button>
+                <ul class="dropdown-menu">
+                    <a href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">藝文</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">新知</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">校園</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">體育</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">影音</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">專題</button></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <span class="cat-time">
+        新知 2021/10/27 21:53:11
+    </span>
+    <h1>
+        雷射繞射零死角　臺科大創腫瘤細胞檢測技術
+    </h1>
+
+    <figure>
+        <img src="./image/laser1.jpeg" class="main-img">
+        <figcaption class="hc"><i>國立臺灣科技大學研究團隊研發雷射微流道繞射晶片裝置，獲得2021未來科技獎。　圖／國立臺灣科技大學提供</i>
+        </figcaption>
+    </figure>
+
+    <div class="article-body hc">
+        <div class="pre">
+            癌細胞轉移與癌症致死率有著密切的關係，根據中央研究院資料顯示，癌症患者約有90％死於癌細胞轉移，多數病人因前期症狀不明顯、難以發現，無法及時的治療。為了讓醫生更有效的做出應對，國立臺灣科技大學材料科學與工程系教授陳建光，帶領研究團隊研發「雷射微流道繞射晶片」裝置，加速檢測用藥是否準確，望能提升癌症治療效率。
+        </div>
+        <p class="hc">
+            【記者顏婕儒綜合報導】癌症又稱惡性腫瘤，當腫瘤細胞從原生器官組織脫離，進入血液後即為循環腫瘤細胞，而當細胞進入新的器官組織後開始增生，即會造成癌症轉移。傳統療程主要透過化學治療與放射性治療，並以電腦斷層監控是否復發。不過，陳建光說明：「腫瘤大小變化慢，很難即時看出治療是否有效。」因此，多數食道癌患者在藥物治療後，醫師仍會採取預防性治療，切除部分食道進行重建手術。
+        </p>
+        <p class="hc">
+            陳建光因不忍看見許多食道癌病人飽受食道切除所苦，於是著手進行研究，經過七年的時間，成功研發出雷射微流道繞射晶片裝置。他解釋，雷射穿過晶片上的表面結構時，會產生繞射現象，因此當血液流過晶片，循環腫瘤細胞會留在晶片不同大小的隙縫上，造成雷射的繞射角度改變。而角度改變的比例跟循環腫瘤細胞數量呈正相關，藉此可以快速地反推細胞數目。
+        </p>
+        <figure class="centered-figure">
+            <img src="./image/laser2.png" class="article-img">
+            <figcaption class="figcaption-article"><i>雷射微流道繞射晶片裝置利用繞射角度的變化，推估循環腫瘤細胞數量，藉此快速的判斷醫師用藥是否有效。　圖／陳建光提供</i>
+            </figcaption>
+        </figure>
+        <p class="hc">
+            此外，雷射微流道繞射晶片裝置只需耗費約一小時就可以評估出循環腫瘤細胞的數目，相比傳統檢測系統約需要三個月才能看出成效，節省許多時間，「癌症病人沒有幾個三個月可以耗損。」陳建光強調。此外，傳統檢測系統需仰賴人力判斷，不僅較易出現錯誤，且一次1萬5000元的檢測費用也相當昂貴，容易造成病人負擔。陳建光預估，使用雷射微流道繞射晶片裝置進行檢測，一次大約只需500至1500元。
+        </p>
+        <p class="hc">
+            臺北榮民總醫院腫瘤醫學部藥物治療科主治醫師陳明晃認為，循環腫瘤細胞可以作為輔助檢測，但不能當作唯一判斷標準，他質疑：「會不會腫瘤縮小到一個程度，外面殺得很乾淨，但原發的其實還沒有清乾淨。」不過陳明晃也相當樂見新技術的出現，期待日後受到認證，能實際運用在醫學上。
+        </p>
+        <figure class="centered-figure">
+            <img src="./image/laser3.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>國立臺灣科技大學材料科學與工程系教授陳建光希望日後能將裝置的各個部分結合起來，並且將操作頁面簡單化，讓不具備專業知識的人也能輕鬆使用。　圖／國立臺灣科技大學提供</i>
+            </figcaption>
+        </figure>
+        <p class="hc">
+            目前，該裝置屬於半自動，團隊希望能將裝置改為全自動。另外，考量到並非所有人都具備醫療專業知識，團隊期望可以精簡操作介面、簡化步驟，陳建光強調：「護士只要按一個按鈕就可以得到答案。」團隊成員、臺科大材料系學生徐祥輔也補充，若要將此技術普及使用，仍須通過諸多認證。目前，晶片裝置只進行食道癌及子宮內膜癌臨床測試，陳建光期許未來此裝置能完成更多測試，以適用於每一種癌症，造福更多癌症病友。
+        </p>
+       
+    </div>
+    <div class="box hc">
+        <div class="hashtag">#循環腫瘤細胞</div>
+        <div class="hashtag">#雷射繞射晶片</div>
+        <div class="hashtag">#癌症</div>
+        <div class="hashtag">#臺科大</div>
+    </div>
+
+    <div class="writer">
+        <img src="./image/gina.png" class="head"><a href="https://108405095.github.io/final/writerpage1%20yen.html"
+            class="name" target="_blank">顏婕儒<a>
+                <div class="job">
+                    政大大學報藝文新知版記者
+                </div>
+                <div class="read-more">
+                    <a href="https://108405095.github.io/final/danda.html" class="read-more-article" target="_blank">
+                        ・丹大探險記—走入這條無法可管的道路
+                    </a>
+                    <a href="https://108405095.github.io/final/blank.html" class="read-more-article" target="_blank">
+                        ・觀眾書寫填展間空白 創新形式反思何謂展覽
+                    </a>
+                    <a href="https://108405095.github.io/final/oyster.html" class="read-more-article" target="_blank">
+                        ・成大創開潛式牡蠣養殖浮棚　解環境永續問題
+                    </a>
+                    <a href="https://108405095.github.io/final/formosa.html" class="read-more-article" target="_blank">
+                        ・《看不見的台灣》匯寶島風光　紅外線攝影映獨特光景
+                    </a>
+                </div>
+    </div>
+
+    <div class="read">延伸閱讀</div>
+    <div class="article-container hc">
+        <a class="article1" href="https://108405095.github.io/final/line.html" target="_blank">
+            <div><img class="articlephoto" src="./image/line.jpeg">
+                <h1 class="articletitle">健行科大創社群化保全裝置　小偷再也「LINE」不掉！</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/blind.html" target="_blank">
+            <div><img class="articlephoto" src="./image/blind.png">
+                <h1 class="articletitle">海大造AI辨識　盼克服視障者防疫障礙</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/lamp.html" target="_blank">
+            <div><img class="articlephoto" src="./image/lamp.jpeg">
+                <h1 class="articletitle">龍華科大創智能補光機　即時打燈擄攝影師芳心</h1>
+            </div>
+        </a>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="footer">
+        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
+    </div>
+</body>
+
+</html>
