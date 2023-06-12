@@ -1,0 +1,625 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&family=Noto+Serif+TC:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #E5E5E4;
+        }
+
+        .header {
+            width: 100%;
+            height: 12vh;
+            background-color: #104B29;
+            display:flex;
+            align-items: center;
+        }
+
+        .header img {
+            height:73%;
+            padding-left: 2vw;
+        }
+
+        .bar {
+            width: 100%;
+            height: 5.5vh;
+            background-color: #2E8A3D;
+            margin-bottom: 3vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-item {
+            font-size: 23px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            text-decoration: none;
+        }
+
+        .cat-time {
+            font-size: 18px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #5d5d5d;
+            margin-left: 2.3vw;
+            margin-top:20px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            font-weight: 900;
+            padding: 0%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+
+        .centered-figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .article-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        figure {
+            width: 100%;
+            margin-top: 0px;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+
+        figcaption {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            width: 80%;
+            text-align: center;
+
+        }
+
+        .figcaption-article {
+            color: #9A9A9A;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100％;
+        }
+
+        .pre {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            color: #5E5E5E;
+            width: 73vw;
+            padding-top: 2.5vh;
+            padding-bottom: 2.5vh;
+            margin-top:1.5vh;
+            margin-bottom: 4vh;
+            font-size: 25px;
+            line-height: 200%;
+            text-align: justify;
+        }
+
+        .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-body {
+            width: 67vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            color: #131313;
+            width: 67vw;
+            margin-bottom: 5.5vh;
+            font-size: 22px;
+            line-height: 195%;
+            text-align: justify;
+        }
+
+        .hashtag {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            display: inline-block;
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 45px;
+            color: #808080;
+        }
+        
+        .writer {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 20px;
+            margin-top: 12px;
+            color: #808080;
+            width: 69vw;
+        }
+
+        .job {
+            margin-top: 1.3vh;
+            margin-left: 1.4vw;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .box {
+            width: 67vw;
+        }
+
+        .head {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: #000000 1px solid;
+            margin-top:1vh;
+            margin-left:0.5vw;
+            margin-right: 1vw;
+            margin-bottom:1vh;
+            object-fit: contain;
+            overflow: hidden;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 600;
+            margin-left: 1.2vw;
+            margin-top:2vh;
+            color: #313131;
+            display: inline-block;
+            text-decoration: none;
+            color: #1e1e1e;
+           }
+
+        .read-more {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #313131;
+            word-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .read-more-article {
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        .article-container {
+            display: flex;
+            width: 73vw;
+            height: 259px;
+            margin-left: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .article1 {
+            width: 26%;
+            height: 73%;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        .articlephoto {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .articletitle {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 550;
+            font-style: normal;
+            margin-top: 8px;
+            margin-left: 0;
+            margin-right: 0;
+            color: #171717;
+        }
+
+        .read {
+            font-size: 28px;
+            font-weight: 700;
+            padding-left: 13.5vw;
+            margin-top: 30px;
+        }
+
+        /*tablet*/
+        @media (min-width:768px) {
+
+            /* 不要顯示在 tablet 以上的 device */
+            .mobile-only {
+                display: none;
+            }
+
+        }
+
+
+        /*mobile version*/
+        @media (max-width: 768px) {
+
+            /* 不要顯示在 mobile device */
+            .mobile-hidden {
+                display: none;
+            }
+
+            .footer {
+                margin-top: 40px;
+            }
+
+            .cat-time {
+                font-size: 9px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid;
+            }
+
+
+            figcaption {
+                font-size: 9px;
+            }
+
+            .figcaption-article {
+                font-size: 9px;
+            }
+
+            .pre {
+                font-size: 16px;
+                line-height: 165%;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .hashtag {
+                font-size: 10px;
+                line-height: 15px;
+                margin-top: 30px;
+                padding-left: 6px;
+                padding-top: 3px;
+                padding-right: 6px;
+                padding-bottom: 3px;
+            }
+
+            .read {
+                font-size: 20px;
+                line-height: 20px;
+                margin-top: 18px;
+            }
+
+            /*調字體大小*/
+            .read-more {
+                font-size: 11px;
+                margin: 2px;
+                line-height: 20px;
+            }
+
+            .head {
+                width: 46px;
+                height: 46px;
+            }
+
+            .name {
+                font-size: 16px;
+                margin-left: 1vw;
+            }
+
+            .job {
+                font-size: 12px;
+                margin-top:0.5vh;
+                margin-bottom:1vh;
+            }
+
+            .article-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-left: 13.5vw;
+                margin-right: 13.5vw;
+                width: auto;
+                height: auto;
+            }
+
+            .article1 {
+                display: flex;
+                width: auto;
+                min-height: 10vh;
+                margin-bottom: 0.5vh;
+                flex-direction: column;
+            }
+
+            .articlephoto{
+            height:30vh;
+            }
+
+            .articletitle {
+                font-size: 13px;
+                margin-top: 2px;
+            }
+
+
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+
+        .m-header {
+            width: 100%;
+            height: 12.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004C1E;
+            margin-bottom: 3.5vh;
+        }
+
+        .m-header img {
+            height: 65%;
+            margin: 0 auto;
+        }
+
+        .dropdown-menu {
+            background-color: #004C1E;
+            border-left: 0;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 20px;
+            padding-top: 10%;
+            text-decoration: none;
+        }
+
+        .btn-secondary:focus {
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .btn-secondary:hover {
+            color: #004C1E;
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            background-color: #004C1E;
+            border-color: #004C1E;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--tablet header&bar-->
+    <div class="mobile-hidden">
+
+        <div class="header">
+            <a href="https://108405095.github.io/final/homepage.html" target="_blank"><img src="./資產 10mdpi.png"><a>
+        </div>
+
+        <div class="bar">
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                    藝文
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                    新知
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                    校園
+                </a> </div>
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                    體育
+                </a> </div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                    影音
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                    專題
+                </a></div>
+        </div>
+    </div>
+
+    <!--mobile header&bar-->
+    <div class="mobile-only">
+        <div class="m-header">
+            <img src="./資產 10mdpi.png">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="./menu3.png" style="width: 110%;height: auto;padding-right:2.5vw;">
+                </button>
+                <ul class="dropdown-menu">
+                   <a href="https://108405095.github.io/final/topicpage art.html" target="_blank"> <li><button class="dropdown-item" type="button">藝文</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpagenew.html" target="_blank"><li><button class="dropdown-item" type="button">新知</button></li></a>
+                   <a href="https://108405095.github.io/final/topicpagecampus.html" target="_blank"> <li><button class="dropdown-item" type="button">校園</button></li></a>
+                   <a href="https://108405095.github.io/final/topicpagesports.html" target="_blank"> <li><button class="dropdown-item" type="button">體育</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpagevideo.html" target="_blank"><li><button class="dropdown-item" type="button">影音</button></li></a>
+                    <a href="https://108405095.github.io/final/topicpage long.html" target="_blank"><li><button class="dropdown-item" type="button">專題</button></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <span class="cat-time">
+        體育 2021/12/15 19:56:54
+    </span>
+    <h1>
+        帶球穿越布陣　袋棍球有望進軍奧運
+    </h1>
+
+    <figure>
+        <img src="./sport/lacrosse/1.jpg" class="main-img">
+        <figcaption class="hc"><i>藍鵲盃袋棍球賽由中華民國袋棍球運動協會舉辦，為了增進新手球員技術，限定球齡兩年以下的選手參加。此次賽事為六人制，比賽分共四節，每節六分鐘，比賽時長共24分鐘。　圖／李昀璇攝</i>
+        </figcaption>
+    </figure>
+
+    <div class="article-body hc">
+        <div class="pre">
+            選手運用手指與手腕巧妙運球，並抓準時機揮動球桿，傳球至隊員球棍袋中。2021藍鵲盃袋棍球賽10至12日於國立臺灣大學竹北分校足球場登場。在女子高中及大專院校組賽事中，國立東華大學以全勝之姿順利蟬聯冠軍。此外，今年七月，世界袋棍球總會（World Lacrosse,WL）獲得核可，意味袋棍球有望於2028年列入奧運比賽項目。
+        </div>
+      <p class="hc"> <p>【記者李昀璇新竹報導】女子高中及大專院校組冠軍戰由東華對上臺北城市科技大學，開賽不到六十秒，東華率先進帳兩分，帶起團隊氣勢，首節便轟出5：0攻勢。第二節城市科大多次闖入東華禁區，仍無力回天，單節僅一分入帳。第三節上半東華持續猛攻，迅速拿下四分，逼迫城市科大喊出暫停，暫停後城市科大仍無力突破對手防線，最終東華以四節14：1取得壓倒性勝利，成功衛冕冠軍寶座。 </p>
+      <p class="hc"> <p>此次東華女子隊由13位成員組成，其中有七位選手皆在冠軍賽中得分。隊長廖羽翎表示，即便出賽成員中有一半為新進學妹，今年隊伍戰力仍有所提升，加上成員數量增加，可進行較多次替補，讓選手有更多彈性調整狀態。 </p>
+      <figure class="centered-figure">
+        <img src="./sport/lacrosse/2.jpg" class="article-img">
+        <figcaption class="figcaption-article"><i>國立東華大學在女子高中與大專院校組冠軍賽取得壓倒性勝利，即便冠軍賽當日已進行三場賽事，仍在賽場上表現突出。　圖／李昀璇攝</i>
+        </figcaption>
+    </figure>   
+    <p class="hc">
+        而在男子大專院校組冠軍賽中，由北部和中部學校組成的種子聯隊以5：2戰勝城市科大。上半局，種子聯隊抓準城市科大傳球失誤連續發動多次快攻，重創對手氣勢。城市科大雖在下半局力挽狂瀾，但仍無法敵擋敵對攻勢，最終遺憾收銀。種子聯隊隊員、東吳大學選手張伍曜表示此次臨時組成隊伍參賽，原先並無預料能奪冠，「但上場後大家格外認真、有拼勁。」他分享團隊因此順著氣勢一步步拔得頭籌。</p> 
+        <figure class="centered-figure">
+            <img src="./sport/lacrosse/3.jpg" class="article-img">
+            <figcaption class="figcaption-article"><i>每節比賽開局皆會重新發球，男女的開球規則不同。在男子組中，雙方會盤踞在地互相爭球，而在女子組中則是讓裁判將球拋向高處，讓選手爭球。　圖／李昀璇攝</i></figcaption>
+        </figure> 
+        <p class="hc">
+            本次賽事吸引23支隊伍報名參賽，相較以往數量明顯增加。中華民國袋棍球運動協會發展部經理關梓樺說明，由於疫情導致國際賽事停擺，協會便將大部分資源及人力移往國內進行基層學校推廣，參賽隊伍數量有顯著成長。</p>     
+         <p class="hc">
+            此外，國際奧林匹克委員會（International Olympic Committee,IOC）於七月正式投票通過對國際袋棍球總會的認可，代表臺灣袋棍球隊將有機會前進奧運舞台，對此，協會除了舉辦藍鵲盃讓國內袋棍球新手互相切磋，也正在進行培訓和推廣，為可能登上的奧運舞台提前備戰。關梓樺表示，目前國內約有500至600位袋棍球選手，未來六年內除了會持續進行在地學校推廣與種子培訓，讓選手數量達到1000位，也期望透過不同層級的競賽，精進選手實力。</p>
+         <figure class="centered-figure">
+                        <img src="./sport/lacrosse/4.jpeg" class="article-img">
+                        <figcaption class="figcaption-article"><i>袋棍球規則中允許的身體碰撞性大，因此球員間常發生激烈的身體碰撞，增加比賽中的刺激性與可看性。　圖／李昀璇攝</i></figcaption>
+            </figure>
+            <p class="hc">
+                現今各校袋棍球隊仍以社團形式組成，東華與城市科大科即為甫成立三年的社團，即便國內多數大專院校尚未成立袋棍球社，缺乏管道的學生仍可以透過協會的種子培訓計畫，接受補助並進行培訓。接觸袋棍球剛滿兩年的蕭正宏說道：「打這個運動當下很開心，也找到自己的歸屬感。」他期望未來越來越多人投入袋棍球，並將目標放在前進奧運舞台，為臺灣爭光。</p>
+            <figure class="centered-figure">
+                <img src="./sport/lacrosse/5.jpeg" class="article-img">
+                <figcaption class="figcaption-article"><i>由於多數大專院校沒有設立袋棍球社團，因此協會提供培育計畫，開放對袋棍球有興趣的學生加入，種子聯隊因而誕生，而隊伍中的選手多數學生皆有另一體育專長項目。　圖／李昀璇攝</i></figcaption>
+    </figure>     
+        </div>    
+            <div class="box hc">
+        <div class="hashtag"># 藍鵲盃</div>
+        <div class="hashtag"># 袋棍球</div>
+        <div class="hashtag"># 東華</div>
+        <div class="hashtag"># 城市科大</div>
+    </div>
+
+    <div class="writer">
+       <img src="./icon/summer.png" class="head"><a class="name" target="_blank"href >李昀璇<a>
+        <div class="job">
+            政大大學報校園體育版記者
+        </div>
+        <div class="read-more">
+            <a href="" class="read-more-article" target="_blank">
+                ・尼加拉瓜與台斷交　在台生憂獎學金計畫中止
+            </a>
+            <a href="" class="read-more-article" target="_blank">
+                ・【全運會】林呈璟胡俊祥手感回溫　一「舉」奪金成功衛冕
+            </a>
+            <a href="" class="read-more-article" target="_blank">
+                ・重返巔峰　張嘉家奪鐵人生涯百金
+            </a>
+            <a href="" class="read-more-article" target="_blank">
+                ・宿舍提升計畫成效低落 學生住宿困境未解
+            </a>
+        </div>
+    </div>
+
+    <div class="read">延伸閱讀</div>
+    <div class="article-container hc">
+        <a class="article1" href="" target="_blank">
+            <div><img class="articlephoto" src="./sport/dance/1.jpeg">
+                <h1 class="articletitle">文大稱霸街舞擂台　睽違九年再得雙冠
+                </h1>
+            </div>
+        </a>
+        <a class="article1" href="" target="_blank">
+            <div><img class="articlephoto" src="./sport/softball/3.jpeg">
+                <h1 class="articletitle">屏科大打線火力全開 退陸軍官校捧壘球金盃</h1>
+            </div>
+        </a>
+        <a class="article1" href="" target="_blank">
+            <div><img class="articlephoto" src="./sport/curve/1.jpeg">
+                <h1 class="articletitle">不「曲」不撓　黑馬長榮破隊史首摘銀</h1>
+            </div>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="footer">
+        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
+    </div>
+</body>
+
+</html>
