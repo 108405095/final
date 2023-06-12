@@ -9,7 +9,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <style>
-     .header {
+    .header {
       width: 100%;
       height: 12vh;
       background-color: #104b29;
@@ -18,96 +18,96 @@
     }
 
     .header img {
-            height: 73%;
-            padding-left: 2vw;
+      height: 73%;
+      padding-left: 2vw;
 
-        }
+    }
+
     .bar-item-bold {
-            font-size: 23px;
-            font-family: noto+serif+tc;
-            font-weight: 900;
-            color: #ffffff;
-            padding-left: 2vw;
-            padding-right: 2vw;
-            text-decoration: none;
-        }
+      font-size: 23px;
+      font-family: noto+serif+tc;
+      font-weight: 900;
+      color: #ffffff;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      text-decoration: none;
+    }
+
     .bar {
       width: 100%;
       height: 5.5vh;
       background-color: #2E8A3D;
-      margin-bottom: 3vh ;
+      margin-bottom: 3vh;
       display: flex;
       white-space: nowrap;
       align-items: center;
     }
-    .bar-item {
-            font-size: 23px;
-            font-family: noto+serif+tc;
-            font-weight: 400;
-            color: #ffffff;
-            padding-left: 2vw;
-            padding-right: 2vw;
-            text-decoration: none;
-        }
 
-     .articlcontainer {
-    display: flex;
-    width: auto;
-    min-height: 110vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 27px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    .bar-item {
+      font-size: 23px;
+      font-family: noto+serif+tc;
+      font-weight: 400;
+      color: #ffffff;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      text-decoration: none;
+    }
+
+    .articlcontainer {
+      display: flex;
+      width: auto;
+      min-height: 110vh;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-top: 27px;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .article {
       width: 30%;
-    height: 190px;
-    margin-bottom: 5%;
+      height: 190px;
+      margin-bottom: 5%;
     }
 
     .articlephoto {
       width: 100%;
-    height: 110%;
-    object-fit: cover;
-    overflow: hidden;
+      height: 110%;
+      object-fit: cover;
+      overflow: hidden;
     }
 
     .articletitle {
       font-size: 18px;
-    line-height: 170%;
-    font-weight: 550;
-    font-style: normal;
-    margin-top: 5%;
+      line-height: 170%;
+      font-weight: 550;
+      font-style: normal;
+      margin-top: 5%;
+      color: #000000;
+      text-decoration: none;
     }
 
-    .wordline {
-      width: auto;
-    height: 2px;
-    margin-top: 2%;
-    background-color: #D9D9D9;
-    }
-
-
+    a {
+  text-decoration: none;
+}
     .footer {
-            padding-top: 5vh;
-            padding-bottom: 2vh;
-            padding-right: 2vw;
-            padding-left: 2vw;
-            font-size: 21px;
-            font-weight: 400;
-            width: 100%;
-            height: auto;
-            max-height: fit-content;
-            color: #ffeded;
-            background-color: #104B29;
-            margin-top:37.4vh;
-            display: flex;
-            justify-content: flex-end;
-        }
+      padding-top: 5vh;
+      padding-bottom: 2vh;
+      padding-right: 2vw;
+      padding-left: 2vw;
+      font-size: 21px;
+      font-weight: 400;
+      width: 100%;
+      height: auto;
+      max-height: fit-content;
+      color: #ffeded;
+      background-color: #104B29;
+      margin-top: 37.4vh;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-   
+
 
     /*tablet version*/
     @media (max-width: 768px) {
@@ -119,7 +119,7 @@
     }
 
     /* mobile version */
-    
+
     @media (min-width: 768px) {
 
       /* 不要顯示在 tablet 以上的 device */
@@ -127,14 +127,16 @@
         display: none;
       }
     }
+
     @media (max-width:768px) {
-            .footer {
-                padding-top: 3vh;
-                padding-bottom: 1.5vh;
-                font-size: 10px;
-                margin-top: 3vh;
-            }
-        }
+      .footer {
+        padding-top: 3vh;
+        padding-bottom: 1.5vh;
+        font-size: 10px;
+        margin-top: 3vh;
+      }
+    }
+
     .m-header {
       width: 100%;
       height: 123px;
@@ -144,7 +146,7 @@
       background-color: #004C1E;
     }
 
-   
+
     .m-header img {
       height: 65%;
       margin: 0 auto;
@@ -218,7 +220,6 @@
     .item h9 {
       font-size: 1.7rem;
     }
-    
   </style>
 </head>
 
@@ -227,48 +228,48 @@
   <!--tablet only-->
   <div class="mobile-hidden">
     <div class="header">
-      <img src="./資產 10mdpi.png">
+      <a href="https://108405095.github.io/final/homepage.html" target="_blank">
+        <img src="./資產 10mdpi.png">
+      </a>
     </div>
     <div class="bar">
 
-      <div
-       class="bar-item">
-        藝文</div>
-        <div
-       class="bar-item">
-        新知</div>
-        <div
-       class="bar-item">
-        校園</div>
-        <div
-       class="bar-item">
-        體育</div>
-        <div
-       class="bar-item">
-        影音</div>
-        <div
-       class="bar-item-bold">
-        專題</div>
-      
+      <div><a class="bar-item" href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+          藝文
+        </a></div>
+      <div><a class="bar-item" href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+        新知</a></div>
+      <div><a class="bar-item" href="https://108405095.github.io/final/topicpagescampus.html" target="_blank">校園</a>
+      </div>
+      <div><a class="bar-item" href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+          體育
+        </a> </div>
+      <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+          影音
+        </a></div>
+        <div class="bar-item-bold">
+          專題
+        </div>
+
     </div>
     <div
       style="margin-top: 33px;margin-left: 10vw;font-size: 20px;font-style: normal;font-weight: 1000;line-height: 24px;color: #000000;">
       分類：專題</div>
     <div class="articlcontainer">
-      <div class="article"><img class="articlephoto" src="./專題主題頁/A丹大探險記 走入這條無法可管的道路.jpg">
-        <h1 class="articletitle">丹大探險記—走入這條無法可管的道路</h1>
+      <div class="article"><a href="https://108405095.github.io/final/phi.html" target="_blank"><img class="articlephoto" src="./專題主題頁/A丹大探險記 走入這條無法可管的道路.jpg">
+        <h1 class="articletitle">丹大探險記—走入這條無法可管的道路</h1></a>
         <div class="wordline"></div>
       </div>
-      <div class="article"><img class="articlephoto" src="./專題主題頁/A法律保護傘外的丹大林道 一條崎嶇難行的共管之路.jpg">
-        <h1 class="articletitle">法律保護傘外的丹大林道：一條崎嶇難行的共管之路</h1>
+      <div class="article"><a href="https://108405095.github.io/final/phi.html" target="_blank"><img class="articlephoto" src="./專題主題頁/A法律保護傘外的丹大林道 一條崎嶇難行的共管之路.jpg">
+        <h1 class="articletitle">法律保護傘外的丹大林道：一條崎嶇難行的共管之路</h1></a>
         <div class="wordline"></div>
       </div>
-      <div class="article"><img class="articlephoto" src="./專題主題頁/A當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代.jpg">
-        <h1 class="articletitle">當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代</h1>
+      <div class="article"><a href="https://108405095.github.io/final/phi.html" target="_blank"><img class="articlephoto" src="./專題主題頁/A當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代.jpg">
+        <h1 class="articletitle">當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代</h1></a>
         <div class="wordline"></div>
       </div>
-      <div class="article"><img class="articlephoto" src="./專題主題頁/A無聲辯駁的牠 禁養比特犬能遏止人犬衝突嗎？.jpg">
-        <h1 class="articletitle">無聲辯駁的牠—禁養比特犬能遏止人犬衝突嗎？</h1>
+      <div class="article"><a href="https://108405095.github.io/final/phi.html" target="_blank"><img class="articlephoto" src="./專題主題頁/A無聲辯駁的牠 禁養比特犬能遏止人犬衝突嗎？.jpg">
+        <h1 class="articletitle">無聲辯駁的牠—禁養比特犬能遏止人犬衝突嗎？</h1></a>
         <div class="wordline"></div>
       </div>
     </div>
@@ -278,7 +279,6 @@
   <div class="mobile-only">
     <div class="m-header">
       <img src="./資產 10mdpi.png">
-
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./藝文主題頁/menu3.png">
@@ -302,27 +302,35 @@
     <!--mobile 文章面 -->
     <div class="container">
       <div class="item">
+        <a style="color: #000000;font-weight: 600;" href="https://108405095.github.io/final/blank">
         <img src="./專題主題頁/A丹大探險記 走入這條無法可管的道路.jpg">
         <h9>丹大探險記—走入這條無法可管的道路</h9>
+        </a>
       </div>
       <div class="item">
+        <a style="color: #000000;font-weight: 600;" href="https://108405095.github.io/final/blank">
         <img src="./專題主題頁/A法律保護傘外的丹大林道 一條崎嶇難行的共管之路.jpg">
         <h9>法律保護傘外的丹大林道：一條崎嶇難行的共管之路</h9>
+        </a>
       </div>
       <div class="item">
+        <a style="color: #000000;font-weight: 600;" href="https://108405095.github.io/final/blank">
         <img src="./專題主題頁/A當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代.jpg">
         <h9>當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代</h9>
+        </a>
       </div>
       <div class="item">
+        <a style="color: #000000;font-weight: 600;" href="https://108405095.github.io/final/blank">
         <img src="./專題主題頁/A無聲辯駁的牠 禁養比特犬能遏止人犬衝突嗎？.jpg">
         <h9>無聲辯駁的牠—禁養比特犬能遏止人犬衝突嗎？</h9>
+        </a>
       </div>
     </div>
 
     <div class="footer">
-        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
-      </div>
+      © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
     </div>
+  </div>
   </div>
 
   </div>
