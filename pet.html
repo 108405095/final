@@ -1,0 +1,605 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700;900&family=Noto+Serif+TC:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #E5E5E4;
+        }
+
+        .header {
+            width: 100%;
+            height: 12vh;
+            background-color: #104B29;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 73%;
+            padding-left: 2vw;
+        }
+
+        .bar {
+            width: 100%;
+            height: 5.5vh;
+            background-color: #2E8A3D;
+            margin-bottom: 3vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-item {
+            font-size: 23px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #ffffff;
+            padding-left: 2vw;
+            padding-right: 2vw;
+            text-decoration: none;
+        }
+
+        .cat-time {
+            font-size: 18px;
+            font-family: noto+serif+tc;
+            font-weight: 400;
+            color: #5d5d5d;
+            margin-left: 2.3vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            font-weight: 900;
+            padding: 0%;
+            margin-left: 2vw;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+
+        h2 {
+            font-weight: 800;
+            color: #000000;
+            margin-left: 16.5vw;
+            font-size: 24px;
+
+        }
+
+        .centered-figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .article-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        figure {
+            width: 100%;
+            margin-top: 0px;
+            object-fit: cover;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+
+        figcaption {
+            color: #9A9A9A;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            width: 80%;
+            text-align: center;
+
+        }
+
+        .figcaption-article {
+            color: #9A9A9A;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100％;
+        }
+
+        .pre {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            color: #5E5E5E;
+            width: 73vw;
+            padding-top: 2.5vh;
+            padding-bottom: 2.5vh;
+            margin-top: 1.5vh;
+            margin-bottom: 4vh;
+            font-size: 19px;
+            line-height: 190%;
+            text-align: justify;
+        }
+
+        .footer {
+            padding-top: 5vh;
+            padding-bottom: 2vh;
+            padding-right: 2vw;
+            padding-left: 2vw;
+            font-size: 21px;
+            font-weight: 400;
+            width: 100%;
+            height: auto;
+            max-height: fit-content;
+            color: #ffeded;
+            background-color: #104B29;
+            margin-top: 80px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-body {
+            width: 67vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            color: #131313;
+            width: 67vw;
+            margin-bottom: 5.5vh;
+            font-size: 17px;
+            line-height: 175%;
+            text-align: justify;
+        }
+
+        .hashtag {
+            border: 0.1px solid #808080;
+            border-radius: 30px;
+            padding-left: 13px;
+            padding-top: 6px;
+            padding-right: 11px;
+            padding-bottom: 7px;
+            display: inline-block;
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 45px;
+            color: #808080;
+        }
+
+
+        .box {
+            width: 67vw;
+        }
+
+        .read-more-article {
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        .article-container {
+            display: flex;
+            width: 73vw;
+            height: 259px;
+            margin-left: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .article1 {
+            width: 26%;
+            height: 73%;
+            text-decoration: none;
+            font-size: 23px;
+        }
+
+        .articlephoto {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .articletitle {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 550;
+            font-style: normal;
+            margin-top: 8px;
+            margin-left: 0;
+            margin-right: 0;
+            color: #171717;
+        }
+
+        .read {
+            font-size: 28px;
+            font-weight: 700;
+            padding-left: 13.5vw;
+            margin-top: 30px;
+        }
+
+        /*tablet*/
+        @media (min-width:768px) {
+
+            /* 不要顯示在 tablet 以上的 device */
+            .mobile-only {
+                display: none;
+            }
+
+        }
+
+
+        /*mobile version*/
+        @media (max-width: 768px) {
+
+            /* 不要顯示在 mobile device */
+            .mobile-hidden {
+                display: none;
+            }
+
+            .footer {
+                margin-top: 40px;
+            }
+
+            .cat-time {
+                font-size: 9px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid;
+            }
+
+
+            figcaption {
+                font-size: 8px;
+            }
+
+            .figcaption-article {
+                font-size: 8px;
+            }
+
+            .pre {
+                font-size: 14px;
+                line-height: 165%;
+            }
+
+            h2{
+                font-size: 16px;
+                width:67vw;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .hashtag {
+                font-size: 8px;
+                line-height: 150%;
+                margin-top: 3vh;
+                padding-left: 5px;
+                padding-top: 2.5px;
+                padding-right: 5px;
+                padding-bottom: 2.5px;
+            }
+
+            .read {
+                font-size: 15px;
+                line-height: 100%;
+                margin-top: 2vh;
+            }
+
+            /*調字體大小*/
+           
+
+            .article-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-left: 13.5vw;
+                margin-right: 13.5vw;
+                width: auto;
+                height: auto;
+            }
+
+            .article1 {
+                display: flex;
+                width: auto;
+                min-height: 10vh;
+                margin-bottom: 0.5vh;
+                flex-direction: column;
+            }
+
+            .articlephoto {
+                height: 30vh;
+            }
+
+            .articletitle {
+                font-size: 13px;
+                margin-top: 2px;
+            }
+
+
+            .footer {
+                padding-top: 3vh;
+                padding-bottom: 1.5vh;
+                font-size: 10px;
+                margin-top: 3vh;
+            }
+        }
+
+        .m-header {
+            width: 100%;
+            height: 12.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004C1E;
+            margin-bottom: 3.5vh;
+        }
+
+        .m-header img {
+            height: 65%;
+            margin: 0 auto;
+        }
+
+        .dropdown-menu {
+            background-color: #004C1E;
+            border-left: 0;
+        }
+
+        .dropdown-item {
+            color: white;
+            font-size: 20px;
+            padding-top: 10%;
+            text-decoration: none;
+        }
+
+        .btn-secondary:focus {
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .btn-secondary:hover {
+            color: #004C1E;
+            background-color: #004C1E;
+            border-color: #004C1E;
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            background-color: #004C1E;
+            border-color: #004C1E;
+            border: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--tablet header&bar-->
+    <div class="mobile-hidden">
+
+        <div class="header">
+            <a href="https://108405095.github.io/final/homepage.html" target="_blank"><img
+                    src="./article-page/art/home/icon.png"><a>
+        </div>
+
+        <div class="bar">
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                    藝文
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                    新知
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                    校園
+                </a> </div>
+            <div><a class="bar-item" href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                    體育
+                </a> </div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                    影音
+                </a></div>
+            <div> <a class="bar-item" href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                    專題
+                </a></div>
+        </div>
+    </div>
+
+    <!--mobile header&bar-->
+    <div class="mobile-only">
+        <div class="m-header">
+            <img src="./article-page/art/home/icon.png">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="./article-page/menu3.png" style="width: 110%;height: auto;padding-right:2.5vw;">
+                </button>
+                <ul class="dropdown-menu">
+                    <a href="https://108405095.github.io/final/topicpage art.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">藝文</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagenew.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">新知</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagecampus.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">校園</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagesports.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">體育</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpagevideo.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">影音</button></li>
+                    </a>
+                    <a href="https://108405095.github.io/final/topicpage long.html" target="_blank">
+                        <li><button class="dropdown-item" type="button">專題</button></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <span class="cat-time">
+        專題 2022/04/07 08:44:12
+    </span>
+    <h1>
+        當娃娃車內裝的是寵物 尚待檢驗的大毛孩時代
+    </h1>
+
+    <figure>
+        <img src="./pet/2.jpeg" class="main-img">
+        <figcaption class="hc"><i>毛孩嘟嘟緊挨著飼主葉佐駿，在他們之間並不存在階級制度，而是如家人般親密無間的關係。　圖／許如鎧攝</i>
+        </figcaption>
+    </figure>
+
+    <div class="article-body hc">
+        <div class="pre">
+            專題記者顏婕儒、李昀璇、陳楷霖、許如鎧綜合報導】根據內政部與寵物登記管理資訊網統計，台灣自2018年起，貓犬新增認養登記數量超車新生兒，差距更是連年擴大。時至2021年，全年新生兒出生數為15萬3820人，創下史上新低；全年登記的寵物貓狗則高達22萬8971隻。數據更進一步顯示，近年可能出現毛孩登記數量一舉超越幼年人口（註）的黃金交叉，將台灣逐步帶入「毛孩當道」的時代。<br><br>
+          寵物數量正以肉眼可見的速度節節攀升，在這個世代中邁入主流，然而流浪貓犬的問題依然在社會角落暗流湧動，為環境安全埋下不定時炸彈，飼養不當引發種種問題的案例更是屢見不鮮。台灣參差的飼主素質，貌似未能跟上毛孩數量增長的速度，在飼養教育不盡完善的環境，毛孩們的幸福似乎仍舊是個未知數。<br><br>
+台灣的飼主，真的準備好了嗎？
+        </div>
+    </div>
+          <div class="article-body hc">
+           <figure class="centered-figure">
+            <img src="./pet/1.png" class="article-img">
+            <figcaption class="figcaption-article"><i>寵物和新生兒歷年登記數量　資料來源／寵物登記管理資訊網、國家發展委員會人口推估查詢系統　資料整理／許如鎧　圖表製作／許如鎧</i>
+            </figcaption>
+        </figure>
+          </div>
+    <h2>養兒育女成本高　毛孩成家庭新寵兒</h2>
+    <div class="article-body hc">
+     
+      <p class="hc">
+            「我覺得養小孩要慎重非常地多，就是他沒有辦法說養就養。」飼主簡嘉誼坦言，有時一個念頭便能將毛孩帶入自己的生活，養育孩子則不然，經濟壓力、時間成本、教育規劃等重擔會接踵而至，可能讓自己難以喘息。飼主Annie則以自身經驗解釋，「小時候媽媽當過夜保姆，需和嬰兒睡同一間房間，讓我從國中時期就經歷新生兒媽媽的日常，痛苦的感覺至今歷歷在目。」這些經歷讓他認為，比起會哭鬧的幼兒，養育毛孩不僅能享受照顧、疼愛孩子的感受，更能同時兼顧生活品質，保有喘息的空間，不必犧牲自己的自由。<br><br>
+
+「養小孩很花錢，投報率可能是負值，養壞了還要出來道歉。」飼主許湘寧直言，養育孩子所花費的時間成本過於龐大，可能讓父母難以兼顧工作，更甚者，未來搬遷或生涯規劃都必須考量到小孩的教育與成長。而飼主葉佐駿認為，一個健全的孩子需要一個健全的家庭，父母雙方的愛缺一不可，即便只是缺少一方，都可能讓孩子誤入歧途，這也代表養育者需要耗費更多的時間成本去陪伴孩子，「從照顧時間和難易度來說，小孩的養育門檻真的比較高。」<br><br>
+
+社團法人臺灣寵物家庭教育推廣協會理事長李庭吾針對「養寵物不養小孩」的現象說道：「如果都需要陪伴，可能養寵物就是比較容易去達成的目標。」他認為，在不婚不生主義漸漸盛行的背景下，少子化、高齡化都為寵物市場帶來大量需求，因為毛孩的養育費用不僅較幼兒省錢，他們的表現有時甚至比孩子更貼心，在較低的成本下能獲得陪伴與慰藉，毛孩可能在不久將來取代幼兒，成為養育對象的首要之選。</p>
+       
+       
+    </div>
+    <h2>飼養毛孩成趨勢　寵物課程、服務漸興起</h2>
+    <div class="article-body hc">
+        <p class="hc">
+            飼養毛孩成為主流後，政府和民間也分別祭出相應措施。為增加大眾飼養責任，台北市動物保護處自2014年起開辦「貓犬學校」，讓飼主帶著貓犬一同上課，學習培養和寵物間的默契、寵物肢體語言和寵物才藝訓練等等。台北市動保處動物管理組技士陳玫雅表示，過去部分民眾會因寵物無法管教，而將其送進動物之家棄養，為了降低此情況，希望藉由飼主教育課程，從源頭著手改善。事實上，目前全台僅北市與社區大學合作辦理飼主教育相關課程，其他縣市則略顯消極。對此，陳玫雅樂見各縣市也能辦理相關業務，若能將飼主教育觀念擴展至各地，有助於減少不良飼養情況，進一步降低棄養和流浪動物問題。<br><br>
+
+毛孩數量持續上升，也帶動寵物寄養服務市場。根據農委會統計，目前各縣、市合法提供寵物寄宿服務業者逾4300家。曾將寵物送進寵物旅館托養的Annie分享，照護人員不僅會在寵物報到時，立即傳送寵物進房的影片，也會提供即時影像，讓他能隨時觀看房內狀況。此外，他也表示館方曾給予專業飼養建議，例如攜帶毛孩習慣的物品、玩具和零食等，可以讓牠們透過熟悉的味道減少緊張感。寵物旅館提供無微不至的呵護，使Annie感到十分放心，也同時滿足他對寄養服務的需求。<br><br>
+
+寵物相關產業的興起，似乎顯示有越來越多的飼主重視飼養品質，不過許多飼主對此反而持否定態度。Annie直言目前台灣對飼主的教育並不完善，導致棄養、放養、虐待事件層出不窮。簡嘉誼也感嘆平時鮮少獲取專業飼養知識，讓他深感台灣對飼主教育與指導的不足。寵物數量的增長似乎只帶動了寵物產業的蓬勃，卻無法促進飼主觀念的提升，在正確觀念宣導不周的情況下，看似完善的硬體設施形同虛設，種種飼養問題依然在台灣層見迭出。</p>
+        <figure class="centered-figure">
+            <img src="./pet/3.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>有不少犬隻習慣在外大小便，若飼主未如規定清理，將造成環境日益惡化。　圖／陳楷霖攝</i></figcaption>
+        </figure>
+    </div>
+          <h2>錯誤觀念成引信　失職飼主燃多重問題</h2>
+    <div class="article-body hc">
+        <p class="hc">
+            抱持錯誤飼養觀念的飼主並不在少數，隨著養寵物的人數遽增，不了解或不在乎如何正確飼養毛孩的主人也越來越多，對社會及寵物的負面影響因而倍增。<br><br>
+
+不少公園的景象能反映此情況。近年來，越來越多民眾將寵物帶至公園散步，伴隨而來的卻是更多未經處理的寵物排泄物，無論在水泥地還是草叢，如地雷般埋藏其中的便溺隨處可見，本應作為綠地的公園也因此淪為寵物的大型廁所。此外，園內也能看到眾多飼主將寵物的牽繩鬆開甚至卸下，讓毛孩能夠自由地奔往心之所向，這樣的場景雖然看似愜意，實則暗藏危機。臨床獸醫師陳映華表示，平時再怎麼乖巧的寵物，也可能在受外界刺激的情況下失控，產生攻擊、暴衝等攸關寵物自身以及民眾安危的舉動。</p>
+        另一方面，飼養相關資訊不流通也間接影響動物權益，許湘寧表示，很多飼主連牽繩、餵食等基本觀念都不了解，最終只能自行上網查找。但網路資訊參差不齊，錯誤、不完全正確的消息也對寵物造成威脅，陳映華指出，即便症狀相同，仍須針對每隻個體差異對症下藥，若僅憑網路指引隨意治療，容易對寵物帶來二度傷害，他直言，「若盡信網路言論來決定治療方式，出了事網友也不會負責。」<br><br>
+
+錯誤資訊同樣影響飼主對寵物的管教方式，李庭吾指出，過去網路上流行一種名為「狗老大」的寵物教育手段，指示飼主可透過懲罰等手段向寵物建立權威，避免其「爬到自己頭上」。即便近年來「狗老大」已因歐美提倡「人寵平權」被推翻，台灣卻仍有飼主藉由網路得知後將其奉為教育準則，損害寵物權益，「以心理學的角度來看，『狗老大』的作法只能抑制卻不能根絕問題，甚至可能導致寵物做出更大的反彈。」<br><br>
+
+此類行為不僅對環境造成影響，更進一步傷害社會和諧。李庭吾認為，目前台灣仍有過半民眾沒有飼養寵物，若他們的生活因飼主之不負責受到影響，易對飼主及寵物群體產生負面觀感，「像現在還是有很多房東不願意讓飼養寵物的家庭入住，一定就是曾經有過不好的經驗。」<br><br>
+
+事實上，《動物保護法》、《廢棄物清理法》以及各縣市關於寵物的自治條例都已明訂不清理排泄物、不繫牽繩等行為均屬違法，多數綠地也矗立告示牌，提醒飼主應盡責任，甚至擺有寵物專用垃圾桶方便飼主利用。農委會也曾發布〈犬隻飼養與照顧指南〉，教導民眾如何正確飼養動物，再加上貓犬學校、寵物旅館等措施逐漸完備，台灣飼主的觀念理應與時俱進，但現在看來，不管是對外的社會共榮，抑或是對內的毛孩照護，台灣飼主仍有一大段路需要努力。
+    <figure class="centered-figure">
+            <img src="./pet/4.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>因應寵物數量攀升，許多公園皆設有狗便清潔箱，望能養成飼主隨手清理狗便的正確觀念，同時維護市容。　圖／陳楷霖攝</i></figcaption>
+        </figure>
+          </div>
+    <h2>飼主責任、毛孩訓練雙管齊下　共創寵物友善環境</h2>
+    <div class="article-body hc">
+        <p class="hc">
+           「國外有一些領養單位會要求飼主要先去上課，然後再去領養，我覺得這個是現在台灣比較欠缺的一塊。」擁有近十年訓犬經驗的寵物訓練師小善（化名）說明。許多新手爸媽在小孩未出生前就會購買嬰兒用品、佈置嬰兒房，並且參與相關課程，養寵物也應抱持同樣的心態，而非一時興起。飼主應該針對所養品種以及寵物本身個性，做出相對應的管理。葉佐駿舉例，自己與親戚皆飼養皮膚對天氣變化較敏感的西高地白㹴，因觀念落差導致飼養方式不同，「我家狗狗的毛很白很蓬鬆，但親戚的狗就是沒什麼毛，然後皮膚都是紅紅的，因為那個皮膚病已經嚴重到不太能救了。」<br><br>
+
+除了飼主對於寵物的認知外，動物本身也需要接受行為教育。以養狗為例，小善表示，四個月是幼犬大腦發展的黃金期，也是犬隻社會化的關鍵，假如此時未受到應有的教育，很可能導致日後出現攻擊性。李庭吾提及，寵物如果沒有辦法在人類社會中生活，飼主就容易出現棄養的念頭，進而造成流浪動物猖獗。對此，他也建議法律規範應明訂，「假如今天棄養一隻狗要十萬塊錢，然後你需要上六周的強制性課程，之後在身分證資料上面備註他曾經棄養過狗，我相信他們可能會再去想一下，而不會這麼容易的去做一個棄養。」
+
+</p>
+   <figure class="centered-figure">
+            <img src="./pet/5.jpeg" class="article-img">
+            <figcaption class="figcaption-article"><i>如今許多人選擇飼養毛孩取代生兒育女，不過因飼主責任教育不全，流浪動物問題也接踵而至。　圖／顏婕儒攝</i></figcaption>
+        </figure>
+            </div>
+    
+    <div class="article-body hc">
+ <p class="hc">
+        談及飼主觀念缺失的現象，曾經營六年寵物友善餐廳的阿牛媽媽（化名）認為，法令無法做到滴水不漏，若希望將問題徹底根除，除了非法繁殖業者的杜絕、飼主端「終養不棄養、結紮不放養」觀念的落實，下一代飼主生命教育的施行，才是真正的長久之計。「所謂的生命教育，就是教導幼童怎麼樣尊重生命、愛生命愛動物，其實就算是一個愛的宣導。」他補充說明。寵物數量增加儼然成為未來趨勢，現在的小孩終將成為下一代飼主，唯有從源頭做起，讓所有人都擁有健全的心態，才能創造一個對毛孩友善的環境。<br><br>
+
+目前國內已有逾四分之一的家戶飼養寵物，為提升毛孩福祉，農委會畜牧處新設立「寵物管理科」，並於4月2日啟動。農委會主任委員陳吉仲表示，政策方向將會讓寵物獲得像人一般的照顧，負起毛小孩「從出生到死亡所有階段全面照顧」的使命。期望毛孩一生的食、衣、住、行、育、樂，都有完整的配套，未來也會制定專法保護寵物權益，全面落實飼主責任。<br><br>
+
+在寵物數量逐年攀升的背景下，飼主觀念的培育已成台灣勢在必行的任務。然而，既有飼主偏差觀念的矯正、未來飼主生命教育的推廣都注定是條漫漫長路，唯有透過政府的積極指引，搭配毛孩父母們的共同參與，方能讓飼主的素質追上高漲的寵物數量，將未來的台灣打造成人寵共榮的世界。</p>
+        
+    </div>
+
+    <div class="box hc">
+        <div class="hashtag">#寵物</div>
+        <div class="hashtag">#貓犬學校</div>
+        <div class="hashtag">#飼主責任</div>
+        <div class="hashtag">#農委會</div>
+        <div class="hashtag">#毛小孩</div>
+        <div class="hashtag">#不當飼養</div>
+    </div>
+
+
+    <div class="read">延伸閱讀</div>
+    <div class="article-container hc">
+        <a class="article1" href="https://108405095.github.io/final/danda-comic.html" target="_blank">
+            <div><img class="articlephoto" src="./danda-comic/1.jpeg">
+                <h1 class="articletitle">丹大探險記—走入這條無法可管的道路</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/bitbull.html" target="_blank">
+            <div><img class="articlephoto" src="./bitbull/3.jpeg">
+                <h1 class="articletitle">無聲辯駁的牠—禁養比特犬能遏止人犬衝突嗎？</h1>
+            </div>
+        </a>
+        <a class="article1" href="https://108405095.github.io/final/danda-comic.html" target="_blank">
+            <div><img class="articlephoto" src="./danda/1.jpeg">
+                <h1 class="articletitle">丹大探險記—走入這條無法可管的道路</h1>
+            </div>
+        </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="footer">
+        © 某報 Media Inc. All Rights Reserved. 台北市文山區指南路2段64號 | 大勇樓股份有限公司
+    </div>
+</body>
+
+</html>
